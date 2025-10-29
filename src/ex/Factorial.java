@@ -4,16 +4,21 @@ import java.util.Scanner;
 
 public class Factorial {
 	
-	static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
 		System.out.println("Type a number to get its Factorial value :");
+		
 		if (!scan.hasNextInt())
 			System.out.println("Please select a valid amount.");
-		
-		int input = scan.nextInt();
-		int fact = factorial(input);
-		
-		System.out.println("The factorial of " + input + " is : [" + fact + "].");
+		else {
+			int input = scan.nextInt();
+			int fact = factorial(input);
+			
+			System.out.println("The factorial of " + input + " is : [" + fact + "].");
+		}
+
+		scan.close();
 	}
 	
 	/// Return the product of a positive integer and all the ones under it.
